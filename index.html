@@ -28,7 +28,7 @@
                 product=product*array[i];
             }
             return (product);
-            };
+        };
     </pre>
 
 
@@ -43,7 +43,7 @@
                 i++;
             }
             return sum;
-            };
+        };
     </pre>
 
 
@@ -58,7 +58,7 @@
                 }
             }
             return count;
-            };
+        };
     </pre>
 
 
@@ -76,7 +76,7 @@
                     }
             }
             return [even, odd];
-            };
+        };
     </pre>
 
 
@@ -92,8 +92,8 @@
             }
             if (count >= 1) {
                 return "YES";
-                } else return "NO";
-            };
+            } else return "NO";
+        };
     </pre>
 
 
@@ -108,7 +108,7 @@
                 }
             }
             return (a);
-            };
+        };
     </pre>
 
 
@@ -121,7 +121,7 @@
                 a.push((array[i] += 1));
             }
             console.log(a.join(" "));
-            };
+        };
     </pre>
 
 
@@ -137,7 +137,35 @@
                 else
                 return "NO";
             } 
-            };
+        };
+    </pre>
+
+
+
+    <h4>Q.9 Unique Color Shirt</h4>
+    <pre>
+        function Unique_Shirts (arr,N) {
+            arr1 = [];
+            count = 0;
+            for (i =0; i<arr.length; i++){
+                for (j=0; j<arr.length; j++){
+                    if (i!=j){
+                        if (arr[i]===arr[j]){
+                            count+=1;
+                        }
+                    }
+                }
+                arr1.push(count);
+                count = 0;
+            }
+            count1=0;
+            for (i=0; i<arr1.length; i++){
+                if (arr1[i]===0){
+                    count1+=1;
+                }
+            }
+            return count1;
+        }
     </pre>
 
 
@@ -152,7 +180,7 @@
                 }
             }
             return min;
-            }
+        }
 
         function arrayMax(arr) {
             max = 0;
@@ -162,7 +190,28 @@
                 }
             }
             return max;
+        }
+    </pre>
+
+
+
+    <h4>Q.11 Birthday Game</h4>
+    <pre>
+        function Birthday_Game(arr, D, M) {
+            let count = 0;
+            let sum = 0;
+            let n = arr.length;
+            for (let i = 0; i < n - M + 1; i++) {
+                for (let j = 0; j < M; j++) {
+                sum += arr[i + j];
+                }
+                if (sum == D) {
+                    count++;
+                }
+                sum = 0;
             }
+            return count;
+        }
     </pre>
 
 </body>
